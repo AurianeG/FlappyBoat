@@ -3,6 +3,7 @@ using UnityEngine;
 public class Rock : MonoBehaviour
 {
     public float speed = 5f;
+    public float destroyXPosition = -10f; // Position at which the rock will be destroyed
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -12,6 +13,10 @@ public class Rock : MonoBehaviour
     void Update() // fait defiler de droite a gauche les rochers
     {
         transform.position += Vector3.left * speed * Time.deltaTime;    
+        if (transform.position.x < destroyXPosition)
+        {
+            Destroy(gameObject);
+        }
 
         
     }
