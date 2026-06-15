@@ -7,7 +7,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
     public float minSpawnHeight = -4f;  
     public float spawnXPosition = 10f; // Position X où les rochers apparaissent
     public GameObject rockPrefab;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    
     void Start()
     {
         InvokeRepeating("SpawnRock", timeToSpawn, timeToSpawn);

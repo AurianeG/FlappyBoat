@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -3, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -173,7 +173,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player
   gravity: -9.8
   strength: 5
+  axis: 0
+  score: 0
   GameOverUI: {fileID: 0}
+  rb: {fileID: 0}
 --- !u!114 &8585176886144534411
 MonoBehaviour:
   m_ObjectHideFlags: 0

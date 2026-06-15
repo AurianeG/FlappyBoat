@@ -6,10 +6,11 @@ public class Player : MonoBehaviour
     public float gravity = -9.8f;
     public float strength = 5f;
     
-    private float maxHeight = 4.1f;
-    private float minHeight = -4f;
+    //private float maxHeight = 4.1f;
+    //private float minHeight = -4f;
 
     public float axis;
+    public float score;
 
 
     public GameObject GameOverUI;
@@ -60,12 +61,21 @@ public class Player : MonoBehaviour
 
 
 
-void OnCollisionEnter2D(Collision2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
         print("Collided with: " + other.gameObject.name);
         if (other.gameObject.tag == "Deadly")
         {
             Death();  
+        }
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        print("Collided with: " + other.gameObject.name);
+        if (other.gameObject.tag == "Scoring")
+        {
+            score++;
+            print("Score: " + score);
         }
     }
 
